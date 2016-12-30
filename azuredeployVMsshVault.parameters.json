@@ -1,0 +1,17 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "Stan"
+    },
+    "sshKeyData": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/PUT-HERE-YOUR-AZURE-SUBSCRIPTION-ID/resourceGroups/RG-AzureKeyVaultStan/providers/Microsoft.KeyVault/vaults/AzureKeyVaultStan"
+         },
+        "secretName": "macleSSH"
+      }
+    }
+  }
+}
